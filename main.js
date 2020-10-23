@@ -5,9 +5,19 @@ function disableSubmit() {
 }
 
 function myFunction() {
-    alert(theNote.value);
+    var theText = document.getElementById(theNote.value);
+    var listNode = document.getElementById("theList");
+    var addNode = document.createElement("LI");
+    addNode.appendChild(theText);
+
+    // var txtNode = document.createTextMode(theText);
+
+    // addNode.appendChild(txtNode);
+    listNode.appendChild(addNode);
+    document.getElementById("theList").appendChild(listNode);
+    // alert(theNote.value);
 }
 
 // listen for the note field to have a length > 0:
-noteField.addEventListener("noteField", myFunction);
+//noteField.addEventListener("noteField", myFunction);
 
