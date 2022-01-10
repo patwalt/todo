@@ -4,17 +4,25 @@ function disableSubmit() {
     document.getElementById("btnSubmit").disabled = true;
 }
 
+var counter = 2;
+
 function myFunction() {
-    var theText = document.getElementById(theNote.value);
-    var listNode = document.getElementById("theList");
-    var addNode = document.createElement("LI");
-    addNode.appendChild(theText);
+
+    
+    var completeList = document.getElementById("theList");
+
+    completeList.innerHTML += "<li>Item " + counter + "</li>";
+    counter++;
+    // var theText = document.getElementById(theNote.value);
+    // var listNode = document.getElementById("theList");
+    // var addNode = document.createElement("LI");
+    // addNode.appendChild(theText);
 
     // var txtNode = document.createTextMode(theText);
 
     // addNode.appendChild(txtNode);
-    listNode.appendChild(addNode);
-    document.getElementById("theList").appendChild(listNode);
+//    listNode.appendChild(addNode);
+    // document.getElementById("theList").appendChild(listNode);
     // alert(theNote.value);
 }
 
